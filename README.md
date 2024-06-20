@@ -1,3 +1,5 @@
-![index](./IMG/index.PNG)
-![index](./IMG/register.PNG)
-![index](./IMG/edit.PNG)
+![index](./IMG/index.png)
+
+![index](./IMG/register.png)
+
+![index](./IMG/edit.png)
