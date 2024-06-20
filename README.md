@@ -1,1 +1,1 @@
-![index](./IMG/index.PNG)
+![index](./IMG/index.png)
