@@ -6380,11 +6380,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas\\source\\repos\\PatientRegisterAPI\\PatientRegisterAPI\\PatientRegisterAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\FRONT-END\\PatientRegisterAPI\\PatientRegisterAPI.csproj",
       "projectName": "PatientRegisterAPI",
-      "projectPath": "C:\\Users\\Lucas\\source\\repos\\PatientRegisterAPI\\PatientRegisterAPI\\PatientRegisterAPI.csproj",
+      "projectPath": "C:\\Users\\Lucas\\Desktop\\FRONT-END\\PatientRegisterAPI\\PatientRegisterAPI.csproj",
       "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas\\source\\repos\\PatientRegisterAPI\\PatientRegisterAPI\\obj\\",
+      "outputPath": "C:\\Users\\Lucas\\Desktop\\FRONT-END\\PatientRegisterAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
