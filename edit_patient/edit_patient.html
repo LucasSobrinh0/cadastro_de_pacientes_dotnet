@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
+    <title>Editar Paciente</title>
+</head>
+
+<body>
+    <main>
+        <nav><a href="../home/index.html" class="btn btn-outline-primary mb-3"><i class="bi bi-house-door-fill"></i>
+                Início</a>
+            <a href="../register_patient/register_patient.html" class="btn btn-outline-primary mb-3"><i
+                    class="bi bi-person-plus-fill"></i> Cadastrar Paciente</a>
+            <h1>Edit Patient</h1>
+        </nav>
+
+        <form id="editPatientForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" maxlength="14" required>
+            <label for="birthDate">Data de Nascimento:</label>
+            <input type="datetime-local" id="birthDate" name="birthDate" required>
+            <label for="phoneNumber">Número de Telefone:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" maxlength="15" required>
+            <button type="submit">Salvar</button>
+        </form>
+    </main>
+
+    <script src="edit_patient.js"></script>
+    <script src="../inputmask/inputmask.js"></script>
+</body>
+
+</html>
