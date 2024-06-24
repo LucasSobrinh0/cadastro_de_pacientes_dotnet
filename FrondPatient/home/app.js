@@ -9,18 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 'Content-Type': 'application/json'
             }
         })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erro ao buscar pacientes: ' + response.statusText);
-                }
-                return response.json();
-            })
-            .then(patients => {
-                showPatients(patients);
-            })
-            .catch(error => {
-                console.error('Falha ao buscar pacientes:', error);
-            });
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao buscar pacientes: ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(patients => {
+            showPatients(patients);
+        })
+        .catch(error => {
+            console.error('Falha ao buscar pacientes:', error);
+        });
     }
 
     function showPatients(patients) {
@@ -39,8 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
             cpfPatients.textContent = `${patient.cpf}`;
             listItem.appendChild(cpfPatients);
 
-            const birthDate = new Date(patient.date);
-            const formattedBirthDate = birthDate.toLocaleDateString('en-US');
+            // Tratamento da data de nascimento
+            const birthDate = new Date(patient.birthDate);
+            const formattedBirthDate = birthDate.toLocaleDateString('pt-BR'); // Define o formato desejado para exibição
 
             const birthDatePatient = document.createElement('span');
             birthDatePatient.textContent = `${formattedBirthDate}`;
@@ -49,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const phoneNumberPatient = document.createElement('span');
             phoneNumberPatient.textContent = `${patient.phoneNumber}`;
             listItem.appendChild(phoneNumberPatient);
-            phoneNumberPatient.innerHTML = '<i class="bi bi-telephone"></i>' + patient.phoneNumber;
 
             const editButton = document.createElement('button');
             editButton.textContent = 'Editar';
@@ -71,32 +71,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function removePatient(patientId) {
-        // Mostra um diálogo de confirmação
         if (confirm('Tem certeza que deseja remover este paciente?')) {
-            // Se o usuário confirmar, prossegue com a requisição DELETE
             fetch(`http://localhost:5065/api/patients/${patientId}`, {
                 method: 'DELETE'
             })
-                .then(response => {
-                    if (response.ok) {
-                        const item = document.querySelector(`li[data-patient-id="${patientId}"]`);
-                        if (item) {
-                            item.remove();
-                        }
-                        alert('Paciente removido com sucesso!');
-                    } else {
-                        console.error('Erro ao remover paciente:', response);
-                        alert('Falha ao remover paciente. Tente novamente.');
+            .then(response => {
+                if (response.ok) {
+                    const item = document.querySelector(`li[data-patient-id="${patientId}"]`);
+                    if (item) {
+                        item.remove();
                     }
-                })
-                .catch(error => console.error('Erro ao remover paciente:', error));
+                    alert('Paciente removido com sucesso!');
+                } else {
+                    console.error('Erro ao remover paciente:', response);
+                    alert('Falha ao remover paciente. Tente novamente.');
+                }
+            })
+            .catch(error => console.error('Erro ao remover paciente:', error));
         }
-        // Se o usuário cancelar, a remoção não ocorre
     }
-
 
     function editPatient(patientId) {
         window.location.href = `../edit_patient/edit_patient.html?id=${patientId}`;
-        console.log(`edit paciente com ID ${patientId}`);
+        console.log(`Editar paciente com ID ${patientId}`);
     }
 });

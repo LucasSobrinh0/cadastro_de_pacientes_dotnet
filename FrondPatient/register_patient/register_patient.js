@@ -6,11 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const name = document.getElementById('name').value;
         const cpf = document.getElementById('cpf').value;
-        const birthDate = document.getElementById('birthDate').valueAsDate; // Pegar a data como objeto Date
+        const birthDate = document.getElementById('birthDate').value; // Obtém a data de nascimento diretamente
         const phoneNumber = document.getElementById('phoneNumber').value;
-
-        // Formatar a data para o formato ISO 8601 (opcional)
-        const formattedBirthDate = birthDate.toISOString();
 
         fetch('http://localhost:5065/api/patients', {
             method: 'POST',
@@ -20,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             body: JSON.stringify({
                 name: name,
                 cpf: cpf,
-                birthDate: formattedBirthDate, // Enviar a data formatada
+                birthDate: birthDate, // Envia a data de nascimento como string no formato 'yyyy-MM-dd'
                 phoneNumber: phoneNumber
             })
         })

@@ -229,3 +229,4 @@ C:\Users\Lucas\source\repos\PatientRegisterAPI\PatientRegisterAPI\obj\Debug\net8
 C:\Users\Lucas\source\repos\PatientRegisterAPI\PatientRegisterAPI\obj\Debug\net8.0\PatientRegisterAPI.pdb
 C:\Users\Lucas\source\repos\PatientRegisterAPI\PatientRegisterAPI\obj\Debug\net8.0\PatientRegisterAPI.genruntimeconfig.cache
 C:\Users\Lucas\source\repos\PatientRegisterAPI\PatientRegisterAPI\obj\Debug\net8.0\ref\PatientRegisterAPI.dll
+C:\Users\Lucas\source\repos\PatientRegisterAPI\PatientRegisterAPI\obj\Debug\net8.0\PatientRegisterAPI.sourcelink.json

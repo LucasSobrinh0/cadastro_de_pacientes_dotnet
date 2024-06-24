@@ -16,7 +16,7 @@ namespace PatientRegisterAPI.Models
 
         [Required]
         [DataType(DataType.Date)]
-        public DateTime Date { get; set; }
+        public DateOnly BirthDate { get; set; }
 
         [Required]
         [StringLength(15)]
